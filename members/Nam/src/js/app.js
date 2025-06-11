@@ -1,6 +1,7 @@
 const links = document.querySelectorAll(".nav-link");
 const h1 = document.querySelector(".hello-text");
 const title = ['Hello','Everyone','!'];
+VanillaTilt.init(document.querySelectorAll(".card"));
 links.forEach((link) => {
   link.addEventListener("click", (e) => {
     links.forEach((link) => link.classList.remove("active"));

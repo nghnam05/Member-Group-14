@@ -48,7 +48,7 @@ body::-webkit-scrollbar {
   object-fit: cover;
 }
 .card {
-  transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease;
 }
 .card:hover {
   transform: scale(1.03);
