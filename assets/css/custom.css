@@ -253,9 +253,7 @@ html, body {
     flex-wrap: wrap; 
     min-height: 2.5rem; 
     line-height: 1.2; 
-}
-
-
+  }
   
   .team-card .tagline {
     color: #0d6efd;
