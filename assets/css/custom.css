@@ -68,7 +68,6 @@ html, body {
   
     .team-card h5 {
       font-size: 1.3rem;
-      padding-top: 30px;
     }
   
     .team-card .tagline {
@@ -79,8 +78,8 @@ html, body {
       font-size: 0.9rem;
     }
 
-    img.img-fluid.rounded-circle.border.border-3.border-primary.mb-3.mx-auto {
-      margin-top: -120px;
+    .row img.img-fluid.rounded-circle.border.border-3.border-primary.mb-3.mx-auto {
+      margin-top: -70px;
     }
   }
 
@@ -130,6 +129,9 @@ html, body {
     .team-card .text-muted {
       font-size: 0.9rem;
     }
+    .row img.img-fluid.rounded-circle.border.border-3.border-primary.mb-3.mx-auto {
+      margin-top: -70px;
+    }
   }
   
   @media (max-width: 767.98px) {
@@ -171,7 +173,7 @@ html, body {
       height: 100px !important;
     }
     .team-card h5 {
-      font-size: 1.2rem;
+      font-size: 1.2rem;      top: -20px;
     }
     .team-card .tagline {
       font-size: 0.9rem;
