@@ -119,10 +119,7 @@ html, body {
       width: 100px !important;
       height: 100px !important;
     }
-    .team-card h5 {
-      font-size: 1.3rem;
-      padding-top: 30px;
-    }
+  
     .team-card .tagline {
       font-size: 1rem;
     }
