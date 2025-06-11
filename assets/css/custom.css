@@ -187,7 +187,7 @@ html, body {
     padding-top: 40px;
     }
 
-    img.img-fluid.rounded-circle.border.border-3.border-primary.mb-3.mx-auto {
+    .row img.img-fluid.rounded-circle.border.border-3.border-primary.mb-3.mx-auto {
     position: relative;
     top: 45px;
 }
