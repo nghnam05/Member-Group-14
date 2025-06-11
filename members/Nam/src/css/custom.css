@@ -25,6 +25,7 @@ body::-webkit-scrollbar {
   object-fit: cover;
   border-radius: 50%;
   border: 10px solid deepskyblue;
+  filter: drop-shadow(1px 1px 20px deepskyblue);
   position: relative;
 }
 .partner-logo {
@@ -46,7 +47,15 @@ body::-webkit-scrollbar {
   max-height: 200px;
   object-fit: cover;
 }
-
+.card {
+  transition: all 0.4s ease-in-out;
+}
+.card:hover {
+  transform: scale(1.03);
+  color: #fff;
+  cursor: pointer;
+    background: linear-gradient(to right, #974de7, #4987f3)
+}
 .cart-title {
     word-spacing:2px;
 }
@@ -57,4 +66,35 @@ body::-webkit-scrollbar {
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+.skill-dashboard {
+  border: 1px solid #ccc;
+}
+.progress {
+  height: 25px;
+  background-color: #e9ecef;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  width: 0%;
+  transition: width 2s ease-in-out;
+}
+
+.skill-label {
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+.progress-bar {
+  transition: width 1.5s ease-in-out;
+}
+@media  screen and (max-width : 468px) {
+  .my-skills {
+    justify-content: center;
+  }
+  .footer-text {
+    font-size: 12px;
+  }
+  
 }
