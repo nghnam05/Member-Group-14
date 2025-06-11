@@ -228,12 +228,21 @@ html, body {
     border: 3px solid #0d6efd;
     object-fit: cover;
   }
-  
+
   .team-card h5 {
     margin-top: 1rem;
     font-size: 1.5rem;
     color: #343a40;
-  }
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap; 
+    min-height: 2.5rem; 
+    line-height: 1.2; 
+}
+
+
   
   .team-card .tagline {
     color: #0d6efd;
@@ -245,6 +254,16 @@ html, body {
     font-size: 0.95rem;
     line-height: 1.6;
   }
+
+  @supports (-webkit-line-clamp: 2) {
+  .team-card .text-muted {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
   
   .social-icon {
     color: #6c757d;
