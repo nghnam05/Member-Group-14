@@ -44,7 +44,6 @@ html, body {
   @media (min-width: 1024px) and (max-width: 1279.98px) {
     .section-content {
       max-width: 960px;
-      max-height: 100vh;
       margin: 2rem auto;
       padding: 1.5rem;
     }
@@ -69,6 +68,7 @@ html, body {
   
     .team-card h5 {
       font-size: 1.3rem;
+      padding-top: 30px;
     }
   
     .team-card .tagline {
@@ -77,6 +77,10 @@ html, body {
   
     .team-card .text-muted {
       font-size: 0.9rem;
+    }
+
+    img.img-fluid.rounded-circle.border.border-3.border-primary.mb-3.mx-auto {
+      margin-top: -120px;
     }
   }
 
@@ -107,6 +111,10 @@ html, body {
       font-size: 1rem;
       padding: 0.75rem 1.5rem;
     }
+
+    .row.justify-content-center {
+      gap: 55px 0;
+    }
   
     .team-card img {
       width: 100px !important;
@@ -114,6 +122,7 @@ html, body {
     }
     .team-card h5 {
       font-size: 1.3rem;
+      padding-top: 30px;
     }
     .team-card .tagline {
       font-size: 1rem;
@@ -254,7 +263,7 @@ html, body {
     min-height: 2.5rem; 
     line-height: 1.2; 
   }
-  
+
   .team-card .tagline {
     color: #0d6efd;
     font-size: 1.1rem;
