@@ -81,7 +81,29 @@ body::-webkit-scrollbar {
   width: 0%;
   transition: width 2s ease-in-out;
 }
+.typing-container {
+  font-size: 36px;
+  font-weight: bold;
+  color: deepskyblue;
+  white-space: nowrap;
+  overflow: hidden;
+}
 
+.cursor {
+  display: inline-block;
+  color: greenyellow;
+  margin-left: 2px;
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
 .skill-label {
   font-weight: 500;
   margin-bottom: 5px;

@@ -35,3 +35,36 @@ const observer = new IntersectionObserver(
 const skillSection = document.getElementById("skills");
 observer.observe(skillSection);
 
+const texts = ["Hello everyone !", "Hi !", "Hey Bro !", "Hi Friends !"];
+const typingSpeed = 100; 
+const erasingSpeed = 50; 
+const delayBetweenTexts = 1500; 
+let textIndex = 0;
+let charIndex = 0;
+
+const typedText = document.getElementById("typed-text");
+
+function type() {
+  if (charIndex < texts[textIndex].length) {
+    typedText.textContent += texts[textIndex].charAt(charIndex);
+    charIndex++;
+    setTimeout(type, typingSpeed);
+  } else {
+    setTimeout(erase, delayBetweenTexts);
+  }
+}
+
+function erase() {
+  if (charIndex > 0) {
+    typedText.textContent = texts[textIndex].substring(0, charIndex - 1);
+    charIndex--;
+    setTimeout(erase, erasingSpeed);
+  } else {
+    textIndex++;
+    if (textIndex >= texts.length) textIndex = 0;
+    setTimeout(type, typingSpeed);
+  }
+}
+document.addEventListener("DOMContentLoaded", function () {
+  setTimeout(type, 1000); 
+});
