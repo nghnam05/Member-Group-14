@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Digital CV</title>
+
+    <!-- Favicon -->
+    <link
+      rel="apple-touch-icon"
+      sizes="57x57"
+      href="./assets/favicon/apple-icon-57x57.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="60x60"
+      href="./assets/favicon/apple-icon-60x60.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="72x72"
+      href="./assets/favicon/apple-icon-72x72.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="76x76"
+      href="./assets/favicon/apple-icon-76x76.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="./assets/favicon/apple-icon-114x114.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="./assets/favicon/apple-icon-120x120.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="./assets/favicon/apple-icon-144x144.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="./assets/favicon/apple-icon-152x152.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./assets/favicon/apple-icon-180x180.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="./assets/favicon/android-icon-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="./assets/favicon/favicon-96x96.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./assets/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./assets/favicon/manifest.json" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta
+      name="msapplication-TileImage"
+      content="./assets/favicon/ms-icon-144x144.png"
+    />
+    <meta name="theme-color" content="#ffffff" />
+
+    <!-- Reset CSS -->
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <link rel="stylesheet" href="./assets/css/responsive.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Embed fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/fonts/stylesheet.css" />
+  </head>
+  <body>
+    <!-- PC header -->
+    <header class="fixed-header">
+      <div class="content">
+        <nav class="navbar">
+          <label for="menu-checkbox" class="toggle-menu">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+              <path
+                fill="currentColor"
+                d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"
+              />
+            </svg>
+          </label>
+
+          <!-- Logo -->
+          <a href="#">
+            <img src="./assets/img/logo.svg" alt="Nyeen.KN" class="logo" />
+          </a>
+
+          <!-- Navigation -->
+          <ul id="pc-nav">
+            <li><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#others">Others</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Tablet/mobile header -->
+    <header class="mobile-header">
+      <input
+        type="checkbox"
+        name=""
+        id="menu-checkbox"
+        class="menu-checkbox"
+        hidden
+      />
+
+      <!-- Overlay -->
+      <label for="menu-checkbox" class="menu-overlay"></label>
+
+      <!-- Menu content -->
+      <div class="menu-drawer">
+        <!-- Logo -->
+        <a href="#">
+          <img src="./assets/img/logo.svg" alt="Besnik." />
+        </a>
+
+        <!-- Navigation -->
+        <ul id="mobile-nav"></ul>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero -->
+      <div class="hero-wrap">
+        <div class="hero content">
+          <div class="info">
+            <h1 class="title">Hello I'm Pham Thi Khanh Nguyen</h1>
+            <h2 class="sub-title">Front-End Developer</h2>
+            <h3 class="subtitle">Personal Information</h3>
+            <ul class="list">
+              <li class="item">
+                <i class="fa-solid fa-calendar-days"></i>
+                31/05/2005
+              </li>
+              <li class="item">
+                <i class="fa-solid fa-user"></i>
+                Female
+              </li>
+              <li class="item">
+                <i class="fa-solid fa-phone"></i>
+                <a href="tel:0367070138">0367070138</a>
+              </li>
+              <li class="item">
+                <i class="fa-solid fa-location-dot"></i>
+                Tan Chanh Hiep, District 12, Ho Chi Minh City
+              </li>
+              <li class="item">
+                <i class="fa-solid fa-envelope"></i>
+                <a href="mailto:phamkhanhnguyen3105@gmail.com"
+                  >phamkhanhnguyen3105@gmail.com</a
+                >
+              </li>
+              <li class="item">
+                <i class="fa-brands fa-github"></i>
+                <a href="https://github.com/PhamKhanhNguyen" target="_blank"
+                  >https://github.com/PhamKhanhNguyen</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="img-border">
+            <img src="./assets/img/img-personal.jpg" alt="" class="hero-img" />
+          </div>
+        </div>
+      </div>
+
+      <!-- About -->
+      <div id="about" class="about">
+        <div class="content">
+          <div class="row">
+            <div class="img-border">
+              <img
+                src="./assets/img/img-personal.jpg"
+                alt=""
+                class="about-img"
+              />
+            </div>
+            <div class="info">
+              <h3>About me</h3>
+              <p class="desc">
+                I'm a sophomore at the University of Transport Ho Chi Minh City
+                (UTH), majoring in Information Technology. I've taken elective
+                courses in Web Programming, Java Programming, Database
+                Management Systems, and Software Engineering.
+              </p>
+              <h4>Career objective</h4>
+              <p class="desc">
+                Passionate and detail-oriented front-end developer eager to
+                apply my skills in HTML, CSS, JavaScript to create user-friendly
+                web applications. I aspire to contribute to the company’s growth
+                and also look forrward to improving my skills through real-world
+                projects.
+              </p>
+
+              <div class="row row-nd">
+                <a href="./cv/src/index.html" class="btn">
+                  Download CV
+                  <i class="fa fa-download"></i>
+                </a>
+                <ul class="icon">
+                  <li>
+                    <a href="#!" class="link-action">
+                      <img src="./assets/img/html.svg" alt="" class="link" />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#!" class="link-action">
+                      <img src="./assets/img/css.svg" alt="" class="link" />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#!" class="link-action">
+                      <img src="./assets/img/mySQL.svg" alt="" class="link" />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#!" class="link-action">
+                      <img src="./assets/img/python.svg" alt="" class="link" />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#!" class="link-action">
+                      <img src="./assets/img/java.svg" alt="" class="link" />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#!" class="link-action">
+                      <img src="./assets/img/c++.svg" alt="" class="link" />
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Skills -->
+      <div id="skills" class="skills">
+        <div class="content">
+          <div class="info">
+            <div class="hard-skills">
+              <h3>Hard Skills</h3>
+              <div class="body">
+                <div class="row">
+                  <span class="label">HTML</span>
+                  <!-- Stars -->
+                  <div class="stars">
+                    <img src="./assets/img/star.svg" alt="Star" />
+                    <img src="./assets/img/star.svg" alt="Star" />
+                    <img src="./assets/img/star.svg" alt="Star" />
+                    <img src="./assets/img/Star-half.svg" alt="Star" />
+                    <img src="./assets/img/Star-none.svg" alt="Star" />
+                  </div>
+                </div>
+                <div class="row">
+                  <span class="label">CSS</span>
+                  <!-- Stars -->
+                  <div class="stars">
+                    <img src="./assets/img/star.svg" alt="Star" />
+                    <img src="./assets/img/star.svg" alt="Star" />
+                    <img src="./assets/img/star.svg" alt="Star" />
+                    <img src="./assets/img/Star-none.svg" alt="Star" />
+                    <img src="./assets/img/Star-none.svg" alt="Star" />
+                  </div>
+                </div>
+                <div class="row">
+                  <span class="label">JavaScript</span>
+                  <!-- Stars -->
+                  <div class="stars">
+                    <img src="./assets/img/star.svg" alt="Star" />
+                    <img src="./assets/img/Star-half.svg" alt="Star" />
+                    <img src="./assets/img/Star-none.svg" alt="Star" />
+                    <img src="./assets/img/Star-none.svg" alt="Star" />
+                    <img src="./assets/img/Star-none.svg" alt="Star" />
+                  </div>
+                </div>
+                <div class="row">
+                  <span class="label">C++</span>
+                  <!-- Stars -->
+                  <div class="stars">
+                    <img src="./assets/img/star.svg" alt="Star" />
+                    <img src="./assets/img/star.svg" alt="Star" />
+                    <img src="./assets/img/Star-none.svg" alt="Star" />
+                    <img src="./assets/img/Star-none.svg" alt="Star" />
+                    <img src="./assets/img/Star-none.svg" alt="Star" />
+                  </div>
+                </div>
+                <div class="row">
+                  <span class="label">MySQL</span>
+                  <!-- Stars -->
+                  <div class="stars">
+                    <img src="./assets/img/star.svg" alt="Star" />
+                    <img src="./assets/img/star.svg" alt="Star" />
+                    <img src="./assets/img/star.svg" alt="Star" />
+                    <img src="./assets/img/Star-none.svg" alt="Star" />
+                    <img src="./assets/img/Star-none.svg" alt="Star" />
+                  </div>
+                </div>
+                <div class="row">
+                  <span class="label">SQL Server</span>
+                  <!-- Stars -->
+                  <div class="stars">
+                    <img src="./assets/img/star.svg" alt="Star" />
+                    <img src="./assets/img/star.svg" alt="Star" />
+                    <img src="./assets/img/Star-half.svg" alt="Star" />
+                    <img src="./assets/img/Star-none.svg" alt="Star" />
+                    <img src="./assets/img/Star-none.svg" alt="Star" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="soft-skills">
+              <h3>Soft Skills</h3>
+              <div class="body">
+                <div class="row">
+                  <span class="label">Communication</span>
+                  <!-- Stars -->
+                  <div class="stars">
+                    <img src="./assets/img/star.svg" alt="Star" />
+                    <img src="./assets/img/star.svg" alt="Star" />
+                    <img src="./assets/img/star.svg" alt="Star" />
+                    <img src="./assets/img/Star-half.svg" alt="Star" />
+                    <img src="./assets/img/Star-none.svg" alt="Star" />
+                  </div>
+                </div>
+                <div class="row">
+                  <span class="label">Presentation</span>
+                  <!-- Stars -->
+                  <div class="stars">
+                    <img src="./assets/img/star.svg" alt="Star" />
+                    <img src="./assets/img/star.svg" alt="Star" />
+                    <img src="./assets/img/star.svg" alt="Star" />
+                    <img src="./assets/img/star.svg" alt="Star" />
+                    <img src="./assets/img/Star-none.svg" alt="Star" />
+                  </div>
+                </div>
+                <div class="row">
+                  <span class="label">Team Work</span>
+                  <!-- Stars -->
+                  <div class="stars">
+                    <img src="./assets/img/star.svg" alt="Star" />
+                    <img src="./assets/img/star.svg" alt="Star" />
+                    <img src="./assets/img/star.svg" alt="Star" />
+                    <img src="./assets/img/star.svg" alt="Star" />
+                    <img src="./assets/img/Star-half.svg" alt="Star" />
+                  </div>
+                </div>
+                <div class="row">
+                  <span class="label">Self-Learning</span>
+                  <!-- Stars -->
+                  <div class="stars">
+                    <img src="./assets/img/star.svg" alt="Star" />
+                    <img src="./assets/img/star.svg" alt="Star" />
+                    <img src="./assets/img/star.svg" alt="Star" />
+                    <img src="./assets/img/Star-half.svg" alt="Star" />
+                    <img src="./assets/img/Star-none.svg" alt="Star" />
+                  </div>
+                </div>
+                <div class="row">
+                  <span class="label">Critical Thinking</span>
+                  <!-- Stars -->
+                  <div class="stars">
+                    <img src="./assets/img/star.svg" alt="Star" />
+                    <img src="./assets/img/star.svg" alt="Star" />
+                    <img src="./assets/img/Star-half.svg" alt="Star" />
+                    <img src="./assets/img/Star-none.svg" alt="Star" />
+                    <img src="./assets/img/Star-none.svg" alt="Star" />
+                  </div>
+                </div>
+                <div class="row">
+                  <span class="label">Project Management</span>
+                  <!-- Stars -->
+                  <div class="stars">
+                    <img src="./assets/img/star.svg" alt="Star" />
+                    <img src="./assets/img/star.svg" alt="Star" />
+                    <img src="./assets/img/star.svg" alt="Star" />
+                    <img src="./assets/img/Star-half.svg" alt="Star" />
+                    <img src="./assets/img/Star-none.svg" alt="Star" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Projects -->
+      <div id="projects" class="projects">
+        <div class="content">
+          <div class="info">
+            <h3>My Projects</h3>
+            <div class="row">
+              <p class="desc">
+                These are the projects I’ve built during my learning journey.
+              </p>
+              <a href="#projects" class="link">
+                <span>View More</span>
+                <img
+                  src="./assets/img/arrow-right.svg"
+                  alt="Arrow right"
+                  class="arrow"
+                />
+              </a>
+            </div>
+            <div class="list">
+              <!-- Project 1 -->
+              <div class="bgr">
+                <div class="item">
+                  <a href="#!">
+                    <img
+                      src="./assets/img/project-1.png"
+                      alt="Round Rock"
+                      class="thumb"
+                    />
+                  </a>
+                  <div class="body">
+                    <div class="info">
+                      <h4 class="title">
+                        <a href="#!" class="open-modal" data-project="roundrock"
+                          >Round Rock</a
+                        >
+                      </h4>
+                      <span class="label"
+                        ><i class="fa-solid fa-heart"></i
+                      ></span>
+                    </div>
+                    <p class="desc">
+                      Designed a static website prototype for Round Rock,
+                      showcasing yard maintenance services, company information,
+                      testimonials, and contact details.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Project Modal 1 -->
+              <div id="project-modal-roundrock" class="project-modal">
+                <div class="modal-box">
+                  <span class="modal-close">&times;</span>
+                  <div class="modal-content">
+                    <div class="modal-left">
+                      <img
+                        src="./assets/img/project-1.png"
+                        alt="Round Rock"
+                        class="modal-img"
+                      />
+                    </div>
+                    <div class="modal-right">
+                      <h2 class="modal-title">Round Rock Website</h2>
+                      <p class="modal-desc">
+                        Designed a static website prototype for Round Rock,
+                        showcasing yard maintenance services, company
+                        information, testimonials, and contact details.
+                      </p>
+                      <p class="modal-desc">
+                        Technologies used: HTML, CSS.
+                        <br />Responsibilities: Interface development.
+                      </p>
+                      <div class="modal-actions">
+                        <a
+                          href="https://github.com/PhamKhanhNguyen/Service"
+                          target="_blank"
+                          class="modal-btn view"
+                        >
+                          VIEW PROJECT <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Project 2 -->
+              <div class="bgr">
+                <div class="item">
+                  <a href="#!">
+                    <img
+                      src="./assets/img/project-2.png"
+                      alt="Round Rock"
+                      class="thumb"
+                    />
+                  </a>
+                  <div class="body">
+                    <div class="info">
+                      <h4 class="title">
+                        <a href="#!" class="open-modal" data-project="webtravel"
+                          >Web Travel</a
+                        >
+                      </h4>
+                      <span class="label"
+                        ><i class="fa-solid fa-heart"></i
+                      ></span>
+                    </div>
+                    <p class="desc">
+                      Design a V-Travel travel website prototype that includes a
+                      travel guide, hotel listing, and user authentication
+                      interface (login, registration, password reset). Build
+                      view-only pages.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Project Modal 2 -->
+              <div id="project-modal-webtravel" class="project-modal">
+                <div class="modal-box">
+                  <span class="modal-close">&times;</span>
+                  <div class="modal-content">
+                    <div class="modal-left">
+                      <img
+                        src="./assets/img/project-2.png"
+                        alt="Web Travel"
+                        class="modal-img"
+                      />
+                    </div>
+                    <div class="modal-right">
+                      <h2 class="modal-title">Travel Website</h2>
+                      <p class="modal-desc">
+                        Design a V-Travel travel website prototype that includes
+                        a travel guide, hotel listing, and user authentication
+                        interface (login, registration, password reset). Build
+                        view-only pages.
+                      </p>
+                      <p class="modal-desc">
+                        Technologies used: HTML, CSS.
+                        <br />Responsibilities: Interface development.
+                      </p>
+                      <div class="modal-actions">
+                        <a
+                          href="https://github.com/PhamKhanhNguyen/Travel"
+                          target="_blank"
+                          class="modal-btn view"
+                        >
+                          VIEW PROJECT <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Project 3 -->
+              <div class="bgr bgr-1">
+                <div class="item">
+                  <a href="#!">
+                    <img
+                      src="./assets/img/project-3.png"
+                      alt="Round Rock"
+                      class="thumb"
+                    />
+                  </a>
+                  <div class="body">
+                    <div class="info">
+                      <h4 class="title">
+                        <a href="#!" class="open-modal" data-project="koishow"
+                          >Koi Show Management System</a
+                        >
+                      </h4>
+                      <span class="label"
+                        ><i class="fa-solid fa-heart"></i
+                      ></span>
+                    </div>
+                    <p class="desc">
+                      Developed a system to manage koi show events, including
+                      guest, member, staff, and referee functionalities.Designed
+                      view-only interfaces to handle event registration, staff
+                      assignments, and referee scheduling.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Project Modal 3 -->
+              <div id="project-modal-koishow" class="project-modal">
+                <div class="modal-box">
+                  <span class="modal-close">&times;</span>
+                  <div class="modal-content">
+                    <div class="modal-left">
+                      <img
+                        src="./assets/img/project-3.png"
+                        alt="Koi Show Management System (TEAM)"
+                        class="modal-img"
+                      />
+                    </div>
+                    <div class="modal-right">
+                      <h2 class="modal-title">
+                        Koi Show Management System (TEAM)
+                      </h2>
+                      <p class="modal-desc">
+                        Developed a system to manage koi show events, including
+                        guest, member, staff, and referee
+                        functionalities.Designed view-only interfaces to handle
+                        event registration, staff assignments, and referee
+                        scheduling.
+                      </p>
+                      <p class="modal-desc">
+                        Technologies used: HTML, CSS, JavaScript, Python
+                        <br />Responsibilities: Created responsive layouts and
+                        structured features for stakeholder review.
+                      </p>
+                      <div class="modal-actions">
+                        <a
+                          href="https://github.com/Guest-Member-Staff-Referee-Mannager/Koi_Show_Management_Systems"
+                          target="_blank"
+                          class="modal-btn view"
+                        >
+                          VIEW PROJECT <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Others -->
+      <div id="others" class="others">
+        <div class="content">
+          <div class="info">
+            <div class="others-grid">
+              <div class="others-item item-1">
+                <h4>Education</h4>
+                <ul class="education-list">
+                  <li>
+                    <span class="year">2025</span>
+                    <a href="https://ut.edu.vn/" target="_blank" class="link">
+                      University of Transport Ho Chi Minh City – Information
+                      Technology
+                    </a>
+                  </li>
+                  <li>
+                    <span class="year">2024</span>
+                    <a
+                      href="https://trungtamtiengtrung.edu.vn/"
+                      target="_blank"
+                      class="link"
+                    >
+                      SOFL Chinese Language Center
+                    </a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="others-item item-2">
+                <h4>Interests</h4>
+                <ul>
+                  <li>
+                    Teaching/Sharing knowledge (Math)
+                    <p>
+                      Taught as a Private Teacher -
+                      <a
+                        href="https://by.edu.vn/SUvU"
+                        target="_blank"
+                        class="link"
+                        >Tri Thuc Academy</a
+                      >
+                    </p>
+                  </li>
+                  <li>
+                    Read book
+                    <p>
+                      The books on technology, science and literature -
+                      <a
+                        href="https://by.edu.vn/AAni"
+                        target="_blank"
+                        class="link"
+                        >"Influence : the psychology of persuasion" by Cialdini,
+                        Robert B</a
+                      >
+                    </p>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="others-item item-3">
+                <h4>Certificates - Award</h4>
+                <ul>
+                  <li>Basic IT Certificate</li>
+                </ul>
+              </div>
+
+              <div class="others-item item-4">
+                <h4>Languages</h4>
+                <ul>
+                  <li>Vietnamese</li>
+                  <li>English (Basic)</li>
+                  <li>Chinese (HSK1)</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="content">
+        <div class="row">
+          <p class="copyright">
+            Designed and presented by Pham Thi Khanh Nguyen, 2025.
+          </p>
+          <div class="social">
+            <a
+              href="https://www.facebook.com/khanhnguyen.pham.106?mibextid=ZbWKwL"
+              class="social-link"
+            >
+              <img src="./assets/img/facebook.svg" alt="" />
+            </a>
+            <a href="https://github.com/PhamKhanhNguyen" class="social-link">
+              <img src="./assets/img/github.svg" alt="" />
+            </a>
+            <a
+              href="https://www.instagram.com/khanhnguyen.pham.106?igsh=MjU0Mm9uc2hkM25i"
+              class="social-link"
+            >
+              <img src="./assets/img/instagram.svg" alt="" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <button class="back-home-bnt">
+      <a href="#" class="back-home">Back home</a>
+    </button>
+
+    <!-- Projects Modal -->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const openButtons = document.querySelectorAll(".open-modal");
+
+        openButtons.forEach((btn) => {
+          btn.addEventListener("click", (e) => {
+            e.preventDefault();
+            const project = btn.getAttribute("data-project");
+            const modal = document.getElementById(`project-modal-${project}`);
+            if (modal) modal.style.display = "block";
+          });
+        });
+
+        const closeButtons = document.querySelectorAll(".modal-close");
+        closeButtons.forEach((btn) => {
+          btn.addEventListener("click", () => {
+            const modal = btn.closest(".project-modal");
+            if (modal) modal.style.display = "none";
+          });
+        });
+
+        window.addEventListener("click", (e) => {
+          document.querySelectorAll(".project-modal").forEach((modal) => {
+            if (e.target === modal) modal.style.display = "none";
+          });
+        });
+      });
+    </script>
+
+    <script>
+      const pcNav = document.querySelector("#pc-nav");
+      const mobileNav = document.querySelector("#mobile-nav");
+
+      // Copy from PC nav -> Mobile nav
+      mobileNav.innerHTML = pcNav.innerHTML;
+    </script>
+  </body>
+</html>

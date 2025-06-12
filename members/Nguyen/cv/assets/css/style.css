@@ -1,0 +1,191 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: #94D9EA;
+}
+
+/* nội dung của cv */
+.cv {
+    justify-content: center;
+    margin: 3.2rem auto;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    width: 1150px;
+}
+
+/* Thanh nội dung bên trái */
+.sidebar-left {
+    background-color: #317092;
+    width: 100%;
+}
+
+.sidebar-left__content, .content__inner {
+    padding: 3rem 3.5rem;
+}
+
+/*  Ảnh cá nhân  */
+.profile img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    border: 3px solid #FFFFFF;
+    display: block;
+    margin: 0 auto;
+    object-fit: cover;
+}
+
+/* Thông tin cá nhân - liên hệ */
+.section__title {
+    font-size: 2.4rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #FFFFFF;
+    border-bottom: 4px solid #FFFFFF;
+    font-weight: bolder;
+    padding-bottom: 5px;
+    margin-top: 32px;
+    margin-bottom: 10px;
+}
+
+.contact ul.section__list {
+    list-style: none;
+}
+
+.contact li {
+    color: #ffffff;
+    line-height: 2.5;
+    font-size: 1.6rem;
+    font-weight: 300;
+}
+
+.contact i {
+    margin-right: 10px;
+    font-size: 1.8rem;
+    width: 13px;
+    height: 13px;
+}
+
+/* Skill */
+.skills h4 {
+    font-size: 1.8rem;
+    font-weight: bolder;
+    color: #FFFFFF;
+}
+
+.skills ul.section__list {
+    padding: 10px 20px;
+}
+
+.skills li {
+    font-size: 1.6rem;
+    color: #FFFFFF;
+    font-weight: 300;
+}
+
+/* Hobby - Language - Certificates - Award */ 
+.hobbies ul.section__list, .languages ul.section__list, .certificates ul.section__list {
+    padding: 0px 20px;
+}
+
+.hobbies li, .languages li ,.certificates li{
+    font-size: 1.6rem;
+    color: #FFFFFF;
+    font-weight: 300;
+}
+
+/* Thanh nội dung bên phải */
+.sidebar-right {
+    width: 100%;
+    background-color: #ffffff;
+}
+
+.header__name {
+    text-transform: uppercase;
+    color: #16325F;
+    font-size: 3.2rem;
+    font-weight: bolder;
+}
+
+.header__role {
+    text-transform: uppercase;
+    color: #16325F;
+    font-size: 2.8rem;
+    font-weight: 500;
+    margin-top: 5px;
+}
+
+.line {
+    border: 5px solid #16325F;
+    width: 115px;
+    border-radius: 999px;
+    margin-top: 5px;
+}
+
+.content__title {
+    font-size: 2.4rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #16325F;
+    padding-top: 32px;
+    border-bottom: 4px solid #16325F;
+    font-weight: bolder;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+/* Mục tiêu nghề nghiệp - Dự án */
+.career p, .project p {
+    color: #16325F;
+    font-size: 1.6rem;
+    font-weight: 300;
+    justify-content: baseline;
+}
+
+.education h4, .project h4 {
+    color: #16325F;
+    font-size: 1.8rem;
+    font-weight: bolder;
+}
+
+ ul.content__list {
+    padding: 10px 20px;
+}
+
+.education li, .project li {
+    font-size: 16px;
+    color: #16325F;
+    font-weight: 300;
+    justify-content: baseline;
+    line-height: 1.5;
+}
+
+.project {
+    margin-bottom: 20px;
+}
+
+span {
+    display: flex;
+    float: right;
+    font-size: 2rem;
+    color: #16325F;
+    font-weight: 300;
+}
+
+.sidebar-left a {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.sidebar-right a {
+    text-decoration: none;
+    color: #16325F;
+}

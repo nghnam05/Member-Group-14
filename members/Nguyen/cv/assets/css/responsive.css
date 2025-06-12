@@ -1,0 +1,163 @@
+/* PC */
+@media (min-width: 1025px) {
+    .cv {
+        width: 1150px;
+        grid-template-columns: 40% 60%; /* Default two-column layout */
+        margin: 3.2rem auto;
+    }
+
+    .sidebar-left, .sidebar-right {
+        width: 100%;
+    }
+
+    .sidebar-left__content, .content__inner {
+        padding: 3rem 3.5rem;
+    }
+
+    .profile img {
+        width: 90px;
+        height: 90px;
+    }
+
+    .section__title, .content__title {
+        font-size: 2.4rem;
+    }
+
+    .header__name {
+        font-size: 3.2rem;
+    }
+
+    .header__role {
+        font-size: 2.8rem;
+    }
+
+    .contact li, .skills li, .hobbies li, .languages li, .certificates li, .career p, .project li, .education li {
+        font-size: 1.6rem;
+    }
+
+    .skills h4, .education h4, .project h4 {
+        font-size: 1.8rem;
+    }
+
+    span {
+        font-size: 2rem;
+    }
+
+    .line {
+        width: 115px;
+    }
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+    .cv {
+        width: 90%;
+        grid-template-columns: 1fr; 
+        margin: 2rem auto;
+    }
+
+    .sidebar-left, .sidebar-right {
+        width: 100%;
+    }
+
+    .sidebar-left__content, .content__inner {
+        padding: 2rem;
+    }
+
+    .profile img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .section__title, .content__title {
+        font-size: 2rem;
+    }
+
+    .header__name {
+        font-size: 2.8rem;
+    }
+
+    .header__role {
+        font-size: 2.4rem;
+    }
+
+    .contact li, .skills li, .hobbies li, .languages li, .certificates li, .career p, .project li, .education li {
+        font-size: 1.4rem;
+    }
+
+    .skills h4, .education h4, .project h4 {
+        font-size: 1.6rem;
+    }
+
+    span {
+        font-size: 1.8rem;
+    }
+
+    .line {
+        width: 100px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+    html {
+        font-size: 55%; 
+    }
+
+    .cv {
+        width: 95%;
+        margin: 1.5rem auto;
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar-left__content, .content__inner {
+        padding: 1.5rem;
+    }
+
+    .profile img {
+        width: 70px;
+        height: 70px;
+    }
+
+    .section__title, .content__title {
+        font-size: 1.8rem;
+        padding-bottom: 3px;
+        margin-top: 20px;
+    }
+
+    .header__name {
+        font-size: 2.4rem;
+    }
+
+    .header__role {
+        font-size: 2rem;
+    }
+
+    .contact li, .skills li, .hobbies li, .languages li, .certificates li, .career p, .project li, .education li {
+        font-size: 1.3rem;
+        line-height: 1.4;
+    }
+
+    .contact i {
+        font-size: 1.6rem;
+        width: 10px;
+        height: 10px;
+    }
+
+    .skills h4, .education h4, .project h4 {
+        font-size: 1.5rem;
+    }
+
+    .skills ul.section__list, .hobbies ul.section__list, .languages ul.section__list, .certificates ul.section__list, ul.content__list {
+        padding: 8px 15px;
+    }
+
+    span {
+        font-size: 1.6rem;
+    }
+
+    .line {
+        width: 80px;
+        border-width: 3px;
+    }
+}
