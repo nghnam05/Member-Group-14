@@ -69,3 +69,17 @@ function erase() {
 document.addEventListener("DOMContentLoaded", function () {
   setTimeout(type, 1000); 
 });
+const hearts = document.querySelectorAll(".fa-heart");
+const likes = document.querySelectorAll(".fa-thumbs-up");
+hearts.forEach((heart) => {
+  heart.addEventListener("click", (e) => {
+    e.target.classList.toggle("fa-regular");
+    e.target.classList.toggle("fa-solid");
+    e.target.classList.toggle("text-danger");
+  });
+});
+likes.forEach((like) => {
+  like.addEventListener('click' ,(e) =>{
+    e.currentTarget.classList.toggle("text-primary")
+  })
+})
