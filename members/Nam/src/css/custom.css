@@ -3,6 +3,7 @@ body {
   background-color: #0d0d0d;
   color: white;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body::-webkit-scrollbar {
@@ -142,6 +143,10 @@ body::-webkit-scrollbar {
   }
   .footer-text {
     font-size: 12px;
+  }
+  .background-video {
+    max-width: 100%;
+    height: auto;
   }
   
 }
