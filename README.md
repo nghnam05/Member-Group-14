@@ -32,7 +32,6 @@ This website was developed as an assignment to apply and demonstrate our skills 
 | Vo Tan Loi               | Member |
 | Pham Minh Quang          | Member |
 
-> Update the table above with real names and roles if needed.
 
 ---
 
