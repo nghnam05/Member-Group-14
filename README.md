@@ -1,6 +1,6 @@
 # 👥 Members of Group 14 – Personal Portfolio Website
 
-Welcome to the official GitHub repository of **Group 14**'s web development project. This website showcases the individual profiles of our team members, built using modern HTML and CSS, and deployed via GitHub Pages.
+Welcome to the official GitHub repository of **Group 14**'s web development project. This website showcases the individual profiles of our team members, built using modern HTML, CSS, Bootstrap, Javascript and deployed via GitHub Pages.
 
 🌐 **Website**: [https://nghnam05.github.io/Member-Group-14/](https://nghnam05.github.io/Member-Group-14/)
 
@@ -38,7 +38,9 @@ This website was developed as an assignment to apply and demonstrate our skills 
 ## 🛠️ Technologies Used
 
 - HTML
-- CSS (Flexbox & Grid)
+- CSS 
+- Bootstrap
+- Javascript
 - Git & GitHub
 - GitHub Pages
 
