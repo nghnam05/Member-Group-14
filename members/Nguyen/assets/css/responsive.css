@@ -144,9 +144,32 @@
   display: none;
  }
 
+ body {
+  padding-top: 60px; 
+ }
+
+ .fixed-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #e6f0ff;
+  z-index: 1000;
+  padding: 12px 0;
+ }
+ 
  .menu-drawer {
   inset: 0 25% 0 0;
   padding: 40px;
+ }
+
+ .menu-drawer img {
+  margin-top: 35px;
+  margin-left: -35px;
+ }
+
+ .menu-drawer ul {
+  margin-top: 0;
  }
 
  .hero-wrap .subtitle {
@@ -305,7 +328,7 @@
   .footer .social {
     justify-content: center;
     gap: 16px;
-    margin-top: -100px;
+    margin-top: -50px;
   }
 
   .footer .copyright {

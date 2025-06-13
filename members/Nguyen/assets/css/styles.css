@@ -11,6 +11,12 @@ body {
     scroll-behavior: smooth;
 }
 
+body {
+  background: linear-gradient( to right, #000336, #63c5e1);
+  color: #ffffff;
+  overflow-x: hidden;
+}
+
 html {
     font-size: 62.5%;
 }
@@ -95,17 +101,43 @@ a {
 .navbar ul {
     display: flex;
     margin-left: auto;
+    gap: 15px;
 }
 
 .navbar ul a {
+    position: relative;
     font-weight: 500;
     font-size: 1.4rem;
     color: #4f5361;
     padding: 8px 30px;
+    transition: color 0.25s;
+}
+
+.navbar ul a::after {
+    position: absolute;
+    content: "";
+    inset: 0;
+    background: #000336;
+    scale: 1 0;
+    z-index: -1;
+    transition: 0.45s;
+    border-radius: 10px;
 }
 
 .navbar ul a:hover {
-    text-decoration: underline;
+    color: #ffffff;
+}
+
+.navbar ul a:hover::after {
+    scale: 1 1;
+}
+
+.navbar li a {
+  display: block;     
+  width: 100%;       
+  padding: 10px 15px; 
+  text-decoration: none;
+  color: #000000;       
 }
 
 /* Hero */
@@ -184,7 +216,6 @@ a {
 
 /* About */
 .about {
-    margin-top: 41px;
     padding: 110px 0;
     background: #ffffff;
 }
@@ -244,7 +275,6 @@ a {
 
 .about img.link:hover {
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
-    background-color: #a3a6ab;
     height: 65px;
     width: 65px;
 }
@@ -257,7 +287,6 @@ a {
 
 /* Skills */
 .skills {
-    margin-top: 41px;
     padding: 110px 0;
     background: #f5fafe;
 }
@@ -296,7 +325,6 @@ a {
 
 /* Projects */
 .projects {
-    margin-top: 41px;
     padding: 110px 0;
     background: #ffffff;
 }
@@ -514,7 +542,6 @@ a {
 
 /* Others */
 .others {
-    margin-top: 41px;
     padding: 110px 0;
     background: #f5fafe;
 }
@@ -632,7 +659,6 @@ a {
 
 /* Footer */
 .footer {
-    margin-top: 55px;
     padding: 50px 0 58px;
 }
 
@@ -671,7 +697,6 @@ a {
     width: 28px;
     height: 28px;
     border-radius: 3px;
-    background: #f9f9f9;
 }
 
 .footer .social-link + .social-link {
@@ -679,7 +704,9 @@ a {
 }
 
 .footer .social-link:hover {
-    background: #ebebeb;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+    height: 35px;
+    width: 35px;
 }
 
 .back-home-bnt {
