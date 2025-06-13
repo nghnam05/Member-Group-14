@@ -28,3 +28,10 @@ img.img-fluid:hover {
 footer {
   font-size: 0.9rem;
 }
+
+
+@media (max-width: 468px) {
+  .project-name {
+    margin-top: 10px;
+  }
+}
