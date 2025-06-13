@@ -4,13 +4,13 @@ Welcome to the official GitHub repository of **Group 14**'s web development proj
 
 🌐 **Website**: [https://nghnam05.github.io/Member-Group-14/](https://nghnam05.github.io/Member-Group-14/)
 
----
+***
 
 ## 📌 Project Overview
 
 This website was developed as an assignment to apply and demonstrate our skills in front-end development and collaborative workflow. The main goal was to create a platform to introduce our team members. The project showcases information about each member of the group.
 
----
+***
 
 ## 🧩 Project Structure
 
@@ -21,7 +21,7 @@ This website was developed as an assignment to apply and demonstrate our skills 
 └── README.md       # Project documentation
 ```
 
----
+***
 
 ## 👨‍💻 Group Members
 
@@ -33,7 +33,7 @@ This website was developed as an assignment to apply and demonstrate our skills 
 | Pham Minh Quang          | Member |
 
 
----
+***
 
 ## 🛠️ Technologies Used
 
@@ -42,7 +42,7 @@ This website was developed as an assignment to apply and demonstrate our skills 
 - Git & GitHub
 - GitHub Pages
 
----
+***
 
 ## 🚀 How to Use
 
@@ -54,13 +54,13 @@ git clone https://github.com/nghnam05/Member-Group-14.git
 
 2. Open `index.html` in a browser or use Live Server in VSCode.
 
----
+***
 
 ## 🎓 Academic Context
 
 This website was created as part of a web design course project at the University of Transport Ho Chi Minh City (UTH). The goal was to simulate a collaborative development process while practicing front-end skills.
 
----
+***
 
 ## 📄 License
 
