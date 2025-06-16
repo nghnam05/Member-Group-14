@@ -4,7 +4,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Team Project</title>
+  <title>Group 14</title>
+  <link rel="icon" type="image/x-icon" href="./assets/images/meeting.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -13,116 +14,166 @@
   <link rel="stylesheet" href="./assets/css/custom.css">
 </head>
 
-<body>
-  <section class="section-content ">
-    <div class="container text-center py-4">
-      <span class="badge text-bg-primary fs-6 fw-normal px-3 py-2 mb-3 rounded-pill">Members of Group 14</span>
-      <h2 class="fw-bold display-5 mb-3 text-dark">About Our Team</h2>
-      <p class="text-secondary fs-5 col-lg-8 mx-auto mb-5">
-        We are a group of students studying web development and currently working together on a practical project as
-        part of our coursework. At present, we are developing a web application for an online mobile phone store. This
-        page introduces our team members and their respective roles in the project.
+<body class="bg-light">
+  <div class="container py-4">
+    <div class="text-center mb-4">
+      <span class="badge text-bg-primary px-3 py-2 mb-4 fw-medium"
+        >Members of Group 14</span
+      >
+      <h2 class="fw-bold">About Our Team</h2>
+      <p class="text-muted col-lg-8 mx-auto">
+        We are a group of students studying web development and currently
+        working together on a practical project as part of our coursework. At
+        present, we are developing a web application for an online mobile
+        phone store. This page introduces our team members and their
+        respective roles in the project.
       </p>
-
-      <div class="mb-5 d-flex justify-content-center gap-3">
-        <button class="btn btn-primary btn-lg px-4 rounded-pill fw-semibold">View Team</button>
-        <button class="btn btn-outline-secondary btn-lg px-4 rounded-pill fw-semibold">View Project</button>
+      <div class="d-flex justify-content-center gap-3 mb-5">
+        <a href="#" class="btn btn-blue px-4">View Team</a>
+        <a href="#" class="btn btn-outline-secondary px-4">View Project</a>
+      </div>
+    </div>
+    <div class="list-members row gy-4 justify-content-center">
+      <!-- Member 1 -->
+      <div class="col-12 col-sm-6 col-lg-3">
+        <div class="card team-card text-center p-2 h-100">
+          <img
+            src="./members/Nam/asset/images/myimage.jpg"
+            alt="Nguyen Hoai Nam"
+            class="team-img mx-auto"
+            style="width: 160px; height: 160px"
+          />
+          <div class="card-body">
+            <h5 class="card-title fw-bold">Nguyen Hoai Nam</h5>
+            <p class="text-primary mb-1 fw-medium">Team Leader</p>
+            <p class="text-muted small truncate">
+              2nd year student at University of Transport Ho Chi Minh City, majoring in...
+            </p>
+            <div
+              class="list-icon-social mb-2 d-flex gap-3 justify-content-center fs-5 text-primary"
+            >
+              <a href="">
+                <i class="bi bi-facebook me-2"></i>
+              </a>
+              <a href="">
+                <i class="bi bi-github me-2"></i>
+              </a>
+              <a href="">
+                <i class="bi bi-instagram"></i>
+              </a>
+            </div>
+            <a
+              href="members/Nam/nam.html"
+              class="text-decoration text-primary"
+              >View Portfolio</a
+            >
+          </div>
+        </div>
       </div>
 
-      <div class="row justify-content-center">
-        <!-- Member 1 -->
-        <div class="col-md-6 col-lg-3 mb-4">
-          <div class="card p-4 team-card h-100 shadow-lg border-0 rounded-4">
-            <img src="./members/Nam/asset/images/myimage.jpg"
-              class="img-fluid rounded-circle border border-3 border-primary mb-3 mx-auto object-fit-cover"
-              alt="Nguyen Hoai Nam" style="width: 180px; height: 180px; object-fit: cover;" />
-            <h5 class="fw-bold mt-2 text-dark">Nguyen Hoai Nam</h5>
-            <p class="tagline text-primary fw-medium mb-2">Team Leader</p>
-            <p class="text-muted small mb-3">2nd year student at University of Transport, majoring in information
-              technology.</p>
-            <div class="icon-group mt-auto d-flex justify-content-center gap-3">
-              <a href="#" class="text-secondary social-icon"><i class="bi bi-facebook fs-5"></i></a>
-              <a href="#" class="text-secondary social-icon"><i class="bi bi-github fs-5"></i></a>
-              <a href="#" class="text-secondary social-icon"><i class="bi bi-instagram fs-5"></i></a>
+      <!-- Member 2 -->
+      <div class="col-12 col-sm-6 col-lg-3">
+        <div class="card team-card text-center p-2 h-100">
+          <img
+            src="./assets/images/member-2.jpg"
+            alt="Pham Thi Khanh Nguyen"
+            class="team-img mx-auto"
+            style="width: 160px; height: 160px"
+          />
+          <div class="card-body">
+            <h5 class="card-title fw-bold">Pham Thi Khanh Nguyen</h5>
+            <p class="text-primary mb-1 fw-medium">Team Member</p>
+            <p class="text-muted small truncate">
+              I'm a sophomore at the University of Transport Ho Chi Minh City
+              (UTH), majoring in Information Technology
+            </p>
+            <div
+              class="mb-2 d-flex gap-3 justify-content-center fs-5 text-primary"
+            >
+              <a href="https://www.facebook.com/khanhnguyen.pham.106?mibextid=ZbWKwL">
+                <i class="bi bi-facebook me-2"></i>
+              </a>
+              <a href="https://github.com/PhamKhanhNguyen">
+                <i class="bi bi-github me-2"></i>
+              </a>
+              <a href="https://www.instagram.com/khanhnguyen.pham.106?igsh=MjU0Mm9uc2hkM25i">
+                <i class="bi bi-instagram"></i>
+              </a>
             </div>
-            <div class="mt-2">
-              <a href="members/Nam/nam.html">View Portfolio</a>
-
-            </div>
+            <a href="members/Nguyen/nguyen.html">View Portfolio</a>
           </div>
         </div>
+      </div>
 
-        <!-- Member 2 -->
-        <div class="col-md-6 col-lg-3 mb-4">
-          <div class="card p-4 team-card h-100 shadow-lg border-0 rounded-4">
-            <img src="./assets/images/member-2.jpg"
-              class="img-fluid rounded-circle border border-3 border-primary mb-3 mx-auto" alt="Silverstone Ong"
-              style="width: 180px; height: 180px; object-fit: cover;" />
-            <h5 class="fw-bold mt-2 text-dark">Pham Thi Khanh Nguyen</h5>
-            <p class="tagline text-primary fw-medium mb-2">Team Member</p>
-            <p class="text-muted small mb-3">I'm a sophomore at the University of Transport Ho Chi Minh City (UTH),
-              majoring in Information Technology. I've taken elective courses in Web Programming, Java Programming,
-              Database Management Systems, and Software Engineering.</p>
-            <div class="icon-group mt-auto d-flex justify-content-center gap-3">
-              <a href="https://www.facebook.com/khanhnguyen.pham.106?mibextid=ZbWKwL" class="text-secondary social-icon"
-                target="_blank"><i class="bi bi-facebook fs-5"></i></a>
-              <a href="https://github.com/PhamKhanhNguyen" class="text-secondary social-icon"><i
-                  class="bi bi-github fs-5" target="_blank"></i></a>
-              <a href="https://www.instagram.com/khanhnguyen.pham.106?igsh=MjU0Mm9uc2hkM25i"
-                class="text-secondary social-icon" target="_blank"><i class="bi bi-instagram fs-5"></i></a>
+      <!-- Member 3 -->
+      <div class="col-12 col-sm-6 col-lg-3">
+        <div class="card team-card text-center p-2 h-100">
+          <img
+            src="./assets/images/member-3.jpg"
+            alt="Vo Tan Loi"
+            class="team-img mx-auto"
+            style="width: 160px; height: 160px"
+          />
+          <div class="card-body">
+            <h5 class="card-title fw-bold">Vo Tan Loi</h5>
+            <p class="text-primary mb-1 fw-medium">Team Member</p>
+            <p class="text-muted small">
+              2nd year student at University of Transport, majoring in...
+            </p>
+            <div class="mb-2 d-flex gap-3 justify-content-center fs-5">
+              <a
+                href="https://www.facebook.com/vo.tan.loi.332109"
+                target="_blank"
+                class="social-icon"
+                ><i class="bi bi-facebook fs-5"></i
+              ></a>
+              <a
+                href="https://github.com/Loivo2005"
+                target="_blank"
+                class="social-icon"
+                ><i class="bi bi-github fs-5"></i
+              ></a>
+              <a href="#" class="social-icon"
+                ><i class="bi bi-instagram fs-5"></i
+              ></a>
             </div>
-            <div class="mt-1">
-              <a href="members/Nguyen/nguyen.html">View Portfolio</a>
-            </div>
+            <a href="members/VTL/index.html">View Portfolio</a>
           </div>
         </div>
+      </div>
 
-        <!-- Member 3 -->
-        <div class="col-md-6 col-lg-3 mb-4">
-          <div class="card p-4 team-card h-100 shadow-lg border-0 rounded-4">
-            <img src="./assets/images/member-3.jpg"
-              class="img-fluid rounded-circle border border-3 border-primary mb-3 mx-auto" alt="Võ Tấn Lợi"
-              style="width: 180px; height: 180px; object-fit: cover;" />
-            <h5 class="fw-bold mt-2 text-dark">Vo Tan Loi</h5>
-            <p class="tagline text-primary fw-medium mb-2">Team Member</p>
-            <p class="text-muted small mb-3">Proin vulputate fermentum quam, in hendrerit tortor dapibus ut.</p>
-            <div class="icon-group mt-auto d-flex justify-content-center gap-3">
-              <a href="https://www.facebook.com/vo.tan.loi.332109" target="_blank" class="text-secondary social-icon"><i
-                  class="bi bi-facebook fs-5"></i></a>
-              <a href="https://github.com/Loivo2005" target="_blank" class="text-secondary social-icon"><i
-                  class="bi bi-github fs-5"></i></a>
-              <a href="#" class="text-secondary social-icon"><i class="bi bi-instagram fs-5"></i></a>
+      <!-- Member 4 -->
+      <div class="col-12 col-sm-6 col-lg-3">
+        <div class="card team-card text-center p-2 h-100">
+          <img
+          src="./members/Quang/Pham Minh Quang Portfolio/assets/images/myavatar.jpg"
+            alt="Pham Minh Quang"
+            class="team-img mx-auto"
+            style="width: 160px; height: 160px"
+          />
+          <div class="card-body">
+            <h5 class="card-title fw-bold">Pham Minh Quang</h5>
+            <p class="text-primary mb-1 fw-medium">Team Member</p>
+            <p class="text-muted small truncate">
+              2nd year student at University of Transport, majoring in...
+            </p>
+            <div class="mb-2 d-flex gap-3 justify-content-center text-primary">
+            <a href="#" class=" social-icon"><i class="bi bi-facebook fs-5"></i></a>
+            <a href="#" class=" social-icon"><i class="bi bi-github fs-5"></i></a>
+            <a href="#" class="social-icon"><i class="bi bi-instagram fs-5"></i></a>
             </div>
-            <div class="mt-2">
-              <a href="members/VTL/index.html">View Portfolio</a>
-            </div>
-          </div>
-        </div>
-
-        <!--Member 4  -->
-        <div class="col-md-6 col-lg-3 mb-4">
-          <div class="card p-4 team-card h-100 shadow-lg border-0 rounded-4">
-            <img src="./members/Quang/Pham Minh Quang Portfolio/assets/images/myavatar.jpg"
-              class="img-fluid rounded-circle border border-3 border-primary mb-3 mx-auto" alt="Osarck Obama"
-              style="width: 180px; height: 180px; object-fit: cover;" />
-            <h5 class="fw-bold mt-2 text-dark">Pham Minh Quang</h5>
-            <p class="tagline text-primary fw-medium mb-2">Team Member</p>
-            <p class="text-muted small mb-3">nd year student at University of Transport, majoring in information
-              technology</p>
-            <div class="icon-group mt-auto d-flex justify-content-center gap-3">
-              <a href="#" class="text-secondary social-icon"><i class="bi bi-facebook fs-5"></i></a>
-              <a href="#" class="text-secondary social-icon"><i class="bi bi-github fs-5"></i></a>
-              <a href="#" class="text-secondary social-icon"><i class="bi bi-instagram fs-5"></i></a>
-            </div>
-            <div class="mt-2">
-              <a href="members/Quang/Pham Minh Quang Portfolio/index.html">View Portfolio</a>
-            </div>
+            <a href="members/Quang/Pham Minh Quang Portfolio/index.html">View Portfolio</a>
           </div>
         </div>
       </div>
     </div>
-  </section>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </div>
+
+  <!-- Bootstrap Icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+  />
 </body>
 
 </html>
