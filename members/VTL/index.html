@@ -1,215 +1,1010 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en">
-
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Võ Tấn Lợi - Digital CV</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-	<meta charset="utf-8">
-	<title>My Portfolio| Vo Tan Loi </title>
-	<meta name="description" content="Dev">
-	<meta name="keywords"
-		content="dev, devashish, devashish patel, deva, software engineer, full stack developer, devashish-patel, dgp, devashish ghanshyam patel, kanbha, daskroi, dascroi, texas a&m university, devashish.patel">
-	<meta name="author" content="Dev ">
+        :root {
+            --primary-color: #6366f1;
+            --secondary-color: #8b5cf6;
+            --accent-color: #06b6d4;
+            --text-dark: #1f2937;
+            --text-light: #6b7280;
+            --bg-light: #f8fafc;
+            --bg-white: #ffffff;
+            --border-light: #e5e7eb;
+            --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+            --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+            --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+            --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1);
+        }
 
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            min-height: 100vh;
+            position: relative;
+        }
 
-	<link rel="stylesheet" href="css/base.css">
-	<link rel="stylesheet" href="css/main.css">
-	<link rel="stylesheet" href="css/vendor.css">
-	<link rel="preload" as="image" href="images/bg.jpeg">
-	<link rel="stylesheet" href="./css/font-mfizz/font-mfizz.css">
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") repeat;
+            z-index: -1;
+        }
 
-	<script src="js/modernizr.js"></script>
-	<script src="js/pace.min.js"></script>
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
 
-	<link rel="icon" type="image/png" href="favicon.png">
+        .cv-card {
+            background: var(--bg-white);
+            border-radius: 24px;
+            box-shadow: var(--shadow-xl);
+            overflow: hidden;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 1s ease forwards;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 60px 40px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px);
+            background-size: 50px 50px;
+            animation: float 20s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateX(0px) translateY(0px) rotate(0deg); }
+            33% { transform: translateX(30px) translateY(-30px) rotate(120deg); }
+            66% { transform: translateX(-20px) translateY(20px) rotate(240deg); }
+        }
+
+        .profile-img {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            border: 6px solid rgba(255, 255, 255, 0.3);
+            margin: 0 auto 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            z-index: 1;
+            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            backdrop-filter: blur(10px);
+            overflow: hidden;
+        }
+
+        .profile-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        .profile-img:hover {
+            transform: scale(1.05) rotate(3deg);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+        }
+
+        .name {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+            position: relative;
+            z-index: 1;
+            background: linear-gradient(135deg, #ffffff, #f0f0f0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .title {
+            font-size: 1.25rem;
+            font-weight: 400;
+            opacity: 0.9;
+            position: relative;
+            z-index: 1;
+            height: 32px;
+        }
+
+        .main-content {
+            display: grid;
+            grid-template-columns: 400px 1fr;
+            gap: 0;
+        }
+
+        .sidebar {
+            background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
+            padding: 48px 32px;
+            border-right: 1px solid var(--border-light);
+        }
+
+        .content {
+            padding: 48px 40px;
+        }
+
+        .section {
+            margin-bottom: 48px;
+            opacity: 0;
+            transform: translateX(-20px);
+            animation: slideInLeft 0.8s ease forwards;
+        }
+
+        .section:nth-child(2) { animation-delay: 0.2s; }
+        .section:nth-child(3) { animation-delay: 0.4s; }
+        .section:nth-child(4) { animation-delay: 0.6s; }
+
+        @keyframes slideInLeft {
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 24px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid var(--accent-color);
+            position: relative;
+        }
+
+        .section-title::before {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background: var(--primary-color);
+            transition: width 0.3s ease;
+        }
+
+        .section:hover .section-title::before {
+            width: 100%;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 16px;
+            padding: 12px 16px;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: 1px solid transparent;
+        }
+
+        .contact-item:hover {
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(139, 92, 246, 0.1));
+            transform: translateX(8px);
+            border-color: rgba(99, 102, 241, 0.2);
+            box-shadow: var(--shadow-md);
+        }
+
+        .contact-icon {
+            width: 40px;
+            height: 40px;
+            margin-right: 16px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 18px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .skill-item {
+            margin-bottom: 24px;
+        }
+
+        .skill-name {
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--text-dark);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .skill-percentage {
+            font-size: 0.875rem;
+            color: var(--text-light);
+            font-weight: 500;
+        }
+
+        .skill-bar {
+            height: 10px;
+            background: #e5e7eb;
+            border-radius: 6px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .skill-progress {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+            border-radius: 6px;
+            width: 0;
+            transition: width 2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            animation: fillBar 2s ease forwards;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .skill-progress::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.6), transparent);
+            animation: shimmer 2s ease-in-out infinite;
+        }
+
+        @keyframes shimmer {
+            0% { left: -100%; }
+            50% { left: 100%; }
+            100% { left: 100%; }
+        }
+
+        @keyframes fillBar {
+            to {
+                width: var(--progress);
+            }
+        }
+
+        .experience-item, .education-item {
+            margin-bottom: 32px;
+            padding: 24px;
+            border-radius: 16px;
+            background: linear-gradient(135deg, #ffffff, #f8fafc);
+            border: 1px solid var(--border-light);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .experience-item::before, .education-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(180deg, var(--primary-color), var(--accent-color));
+        }
+
+        .experience-item:hover, .education-item:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+            border-color: rgba(99, 102, 241, 0.2);
+        }
+
+        .job-title, .degree {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 8px;
+        }
+
+        .company, .school {
+            color: var(--primary-color);
+            font-weight: 500;
+            font-size: 1rem;
+            margin-bottom: 8px;
+        }
+
+        .date {
+            color: var(--text-light);
+            font-size: 0.875rem;
+            font-weight: 500;
+            margin-bottom: 12px;
+            padding: 4px 12px;
+            background: rgba(99, 102, 241, 0.1);
+            border-radius: 20px;
+            display: inline-block;
+        }
+
+        .description {
+            color: var(--text-light);
+            line-height: 1.7;
+            font-size: 0.95rem;
+        }
+
+        .print-btn {
+            position: fixed;
+            bottom: 32px;
+            right: 32px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            border: none;
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            cursor: pointer;
+            box-shadow: var(--shadow-lg);
+            transition: all 0.3s ease;
+            font-size: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+        }
+
+        .print-btn:hover {
+            transform: scale(1.1) rotate(-5deg);
+            box-shadow: 0 20px 40px rgba(99, 102, 241, 0.4);
+        }
+
+        .floating-elements {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .floating-circle {
+            position: absolute;
+            border-radius: 50%;
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(139, 92, 246, 0.1));
+            animation: float-circle 6s ease-in-out infinite;
+        }
+
+        .floating-circle:nth-child(1) {
+            width: 80px;
+            height: 80px;
+            top: 10%;
+            left: 10%;
+            animation-delay: 0s;
+        }
+
+        .floating-circle:nth-child(2) {
+            width: 120px;
+            height: 120px;
+            top: 60%;
+            right: 10%;
+            animation-delay: 2s;
+        }
+
+        .floating-circle:nth-child(3) {
+            width: 60px;
+            height: 60px;
+            bottom: 20%;
+            left: 20%;
+            animation-delay: 4s;
+        }
+
+        @keyframes float-circle {
+            0%, 100% { transform: translateY(0px) scale(1); }
+            50% { transform: translateY(-20px) scale(1.1); }
+        }
+
+        @media (max-width: 768px) {
+            .main-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .name {
+                font-size: 2.5rem;
+            }
+            
+            .container {
+                padding: 12px;
+            }
+            
+            .sidebar, .content {
+                padding: 24px 20px;
+            }
+
+            .header {
+                padding: 40px 20px;
+            }
+
+            .profile-img {
+                width: 120px;
+                height: 120px;
+                font-size: 48px;
+            }
+        }
+
+        @media print {
+            body {
+                background: white;
+            }
+            
+            .cv-card {
+                box-shadow: none;
+                border-radius: 0;
+            }
+            
+            .print-btn, .floating-elements {
+                display: none;
+            }
+            
+            .header::before {
+                display: none;
+            }
+        }
+
+        
+        .vietnamese-text {
+            font-feature-settings: "kern" 1, "liga" 1;
+            text-rendering: optimizeLegibility;
+        }
+    </style>
 </head>
+<body>
+    <div class="floating-elements">
+        <div class="floating-circle"></div>
+        <div class="floating-circle"></div>
+        <div class="floating-circle"></div>
+    </div>
+    
+    <div class="container">
+        <div class="cv-card">
+            <div class="header">
+                <div class="profile-img">
+                    <img src="images/profile.png" alt="Võ Tấn Lợi">
+                </div>
+                <h1 class="name">Võ Tấn Lợi</h1>
+                <p class="title">Full Stack Developer</p>
+            </div>
+            
+            <div class="main-content">
+                <div class="sidebar">
+                    <div class="section">
+                        <h2 class="section-title">Contact</h2>
+                        <div class="contact-item">
+                            <div class="contact-icon">📧</div>
+                            <span>votanloi02052005@gmail.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">📱</div>
+                            <span>0347904403</span>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">📍</div>
+                            <span>TX24, Thạnh Xuân, Quận 12</span>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">🐙</div>
+                            <span>github.com/votanloi</span>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">🎂</div>
+                            <span>02/05/2005</span>
+                        </div>
+                    </div>
+                    
+                    <div class="section">
+                        <h2 class="section-title">Skills</h2>
+                        <div class="skill-item">
+                            <div class="skill-name">
+                                JavaScript
+                                <span class="skill-percentage">90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="--progress: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">
+                                React
+                                <span class="skill-percentage">85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="--progress: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">
+                                Node.js
+                                <span class="skill-percentage">80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="--progress: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">
+                                Python
+                                <span class="skill-percentage">75%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="--progress: 75%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">
+                                CSS/HTML
+                                <span class="skill-percentage">95%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="--progress: 95%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="section">
+                        <h2 class="section-title">Languages</h2>
+                        <div class="skill-item">
+                            <div class="skill-name">
+                                English
+                                <span class="skill-percentage">85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="--progress: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">
+                                Japanese
+                                <span class="skill-percentage">50%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="--progress: 50%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">
+                                Vietnamese
+                                <span class="skill-percentage">100%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="--progress: 100%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="content">
+                    <div class="section">
+                        <h2 class="section-title">Professional Summary</h2>
+                        <p class="description vietnamese-text">
+                            Sinh viên năm 2 chuyên ngành Công nghệ phần mềm với đam mê lập trình web và phát triển ứng dụng. 
+                            Có kinh nghiệm thực tế qua các dự án thực tập, thành thạo HTML, CSS, JavaScript và các framework hiện đại. 
+                            Khả năng làm việc nhóm tốt, sử dụng thành thạo Git để quản lý mã nguồn và có kinh nghiệm hướng dẫn sinh viên mới.
+                        </p>
+                    </div>
+                    
+                    <div class="section">
+                        <h2 class="section-title">Work Experience</h2>
+                        
+                        <div class="experience-item">
+                            <div class="job-title">Thực tập sinh Lập trình Web</div>
+                            <div class="company">Công ty TNHH CT Tech</div>
+                            <div class="date">2024 - Present</div>
+                            <div class="description vietnamese-text">
+                                Tham gia phát triển giao diện người dùng cho website bằng HTML, CSS, JavaScript.
+                                Làm quen với React để xây dựng các thành phần giao diện cơ bản.
+                                Hợp tác với nhóm để sửa và tối ưu hiệu năng trang web.
+                            </div>
+                        </div>
+                        
+                        <div class="experience-item">
+                            <div class="job-title">Thực tập sinh Full Stack</div>
+                            <div class="company">Digital Solutions Ltd.</div>
+                            <div class="date">2024 - 2025</div>
+                            <div class="description vietnamese-text">
+                                Phát triển và duy trì nhiều ứng dụng phía client sử dụng React, Express.js và MongoDB.
+                                Tham gia triển khai quy trình kiểm thử tự động, giúp giảm 35% lỗi.
+                                Hỗ trợ tối ưu hóa hiệu suất ứng dụng, giúp thời gian tải nhanh 50%.
+                            </div>
+                        </div>
+                        
+                        <div class="experience-item">
+                            <div class="job-title">Thực tập sinh Frontend</div>
+                            <div class="company">Creative Web Agency</div>
+                            <div class="date">2024 - 2025</div>
+                            <div class="description vietnamese-text">
+                                Hỗ trợ phát triển giao diện web đáp ứng cho các dự án khách hàng, sử dụng HTML5, CSS3, và JavaScript.
+                                Phối hợp chặt chẽ với các nhà thiết kế để chuyển đổi ý tưởng thiết kế thành giao diện người dùng chính xác.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="section">
+                        <h2 class="section-title">Education</h2>
+                        
+                        <div class="education-item">
+                            <div class="degree">Đại học Giao thông Vận tải TP.HCM</div>
+                            <div class="school">Công nghệ phần mềm</div>
+                            <div class="date">2023 - 2027</div>
+                            <div class="description vietnamese-text">
+                                Hiện là sinh viên năm thứ 2 với định hướng chuyên sâu về kỹ thuật phần mềm và phát triển web.
+                                Các môn học tiêu biểu: Cấu trúc Dữ liệu và Giải thuật, Lập trình Java, Công nghệ phần mềm.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="section">
+                        <h2 class="section-title">Projects & Activities</h2>
+                        <div class="description vietnamese-text">
+                            • Tham gia tổ chức workshop về lập trình Python và Git<br>
+                            • Hướng dẫn sinh viên năm nhất cài đặt môi trường lập trình và làm quen với VS Code<br>
+                            • Phát triển các dự án web cá nhân sử dụng React và Node.js<br>
+                            • Tham gia các cuộc thi lập trình và hackathon của trường
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <button class="print-btn" onclick="window.print()" title="Print CV">🖨️</button>
 
-<body id="top">
+    <script>
+        
+        const title = document.querySelector('.title');
+        const titles = [
+            'Full Stack Developer',
+            'React Specialist', 
+            'Frontend Developer',
+            'Thực tập sinh IT',
+            'Web Developer'
+        ];
+        let currentTitle = 0;
+        let charIndex = 0;
+        let isDeleting = false;
 
-	<header>
-		<div class="row">
-			<div class="top-bar">
-				<div class="logo">
-					<a href="index.html">KARDS</a>
-				</div>
+        function typeTitle() {
+            const current = titles[currentTitle];
+            
+            if (isDeleting) {
+                title.textContent = current.substring(0, charIndex - 1);
+                charIndex--;
+            } else {
+                title.textContent = current.substring(0, charIndex + 1);
+                charIndex++;
+            }
 
-			</div>
+            let typeSpeed = isDeleting ? 80 : 120;
 
-		</div>
+            if (!isDeleting && charIndex === current.length) {
+                typeSpeed = 2500;
+                isDeleting = true;
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                currentTitle = (currentTitle + 1) % titles.length;
+                typeSpeed = 800;
+            }
 
-	</header>
+            setTimeout(typeTitle, typeSpeed);
+        }
 
+        setTimeout(typeTitle, 2000);
 
-	<section id="intro">
-		<div class="intro-overlay"></div>
-		<div class="intro-content">
-			<div class="row">
-				<div class="col-twelve" style="padding-top: 20%">
-					<h5 style="margin-left: -30%"></h5>
-					<h1>Tôi đang là sinh viên năm 2 chuyên ngành CNTT tại UTH</h1>
-					<p class="intro-position">
-						<span> Từng làm trưởng nhóm môn Công nghệ phần mềm </span><br />
-					</p>
-					<a class="button stroke smoothscroll" href="#about" title="">Personal Summary</a>
-				</div>
-			</div>
-		</div>
+       
+        const observerOptions = {
+            threshold: 0.15,
+            rootMargin: '0px 0px -50px 0px'
+        };
 
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateX(0)';
+                }
+            });
+        }, observerOptions);
 
+        document.querySelectorAll('.section').forEach(section => {
+            observer.observe(section);
+        });
 
-	</section>
+        
+        document.querySelectorAll('.skill-item').forEach(item => {
+            item.addEventListener('mouseenter', () => {
+                const progress = item.querySelector('.skill-progress');
+                progress.style.background = 'linear-gradient(90deg, #e74c3c, #f39c12)';
+                progress.style.transform = 'scaleY(1.2)';
+            });
 
+            item.addEventListener('mouseleave', () => {
+                const progress = item.querySelector('.skill-progress');
+                progress.style.background = 'linear-gradient(90deg, var(--primary-color), var(--accent-color))';
+                progress.style.transform = 'scaleY(1)';
+            });
+        });
 
-	<section id="about">
-		<div class="row section-intro">
-			<div class="col-twelve">
-				<h5>Regarding</h5>
-				<h1>Allow me to present myself
+       
+        document.querySelectorAll('.contact-item').forEach(item => {
+            item.addEventListener('click', () => {
+                const text = item.textContent.trim();
+                if (text.includes('@')) {
+                    window.open(`mailto:${text.split(' ').pop()}`);
+                } else if (text.includes('github')) {
+                    window.open(`https://${text.split(' ').pop()}`);
+                }
+            });
+        });
 
-				</h1>
-				<div class="intro-info">
-					<img src="images/profile-pic-2.jpg" alt="Profile Picture" style="align-self: center" >
-					<p class="lead" style="text-align: justify">
-						Xin chào Anh/Chị,
-						Em là Võ Tấn Lợi, sinh viên năm 2 ngành Công nghệ thông tin tại Đại Học Giao thông vận
-						tải HCM . Em
-						có kinh nghiệm về ngôn ngữ lập trình C++, Java, Python. Về cơ sở dữ liệu MySQL. Em đang
-						học về
-						những thuật toán để phục vụ cho công việc sau này.Làm bài tập hiệu quả trên
-						Leetcode, hiểu
-						cách tối ưu chương trình và sử dụng cấu trúc dữ liệu phù hợp.
-					</p>
-				</div>
-			</div>
-		</div>
+        let ticking = false;
+        function updateParallax() {
+            const scrolled = window.pageYOffset;
+            const header = document.querySelector('.header');
+            const rate = scrolled * -0.3;
+            header.style.transform = `translateY(${rate}px)`;
+            ticking = false;
+        }
 
-		<div class="row about-content">
-			<div class="col-twelve tab-full full-width align-center">
-				<h3>Core Competencies</h3>
-				<ul class="info-list">
-					<li>
-						<strong>Programming Languages</strong>
-						<span>Python, C++ , Java</span>
-					</li>
-					<li>
+        window.addEventListener('scroll', () => {
+            if (!ticking) {
+                requestAnimationFrame(updateParallax);
+                ticking = true;
+            }
+        });
 
-					</li>
-					<li>
-					</li>
-					<li>
-					</li>
-				</ul>
+        
+        const printBtn = document.querySelector('.print-btn');
+        printBtn.addEventListener('mouseenter', function() {
+            this.style.animation = 'pulse 1.5s ease-in-out infinite';
+        });
 
-			</div>
-		</div>
-		<div class="row button-section">
-			<div class="col-twelve">
-				<a href="#contact" title="Hire Me" class="button stroke smoothscroll">Contact Me</a>
-			</div>
-		</div>
-	</section>
+        printBtn.addEventListener('mouseleave', function() {
+            this.style.animation = 'none';
+        });
 
+        
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes pulse {
+                0% { transform: scale(1) rotate(0deg); }
+                50% { transform: scale(1.1) rotate(-5deg); }
+                100% { transform: scale(1) rotate(0deg); }
+            }
+        `;
+        document.head.appendChild(style);
 
-	<section id="resume" class="grey-section">
-		
+        const skillBars = document.querySelectorAll('.skill-progress');
+        const skillObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => {
+                        const progress = entry.target.style.getPropertyValue('--progress');
+                        entry.target.style.width = progress;
+                    }, index * 200);
+                }
+            });
+        }, { threshold: 0.5 });
 
-		<section id="work">
-			<div class="row resume-timeline">
-				<div class="col-twelve resume-header">
-					<h2>Career History</h2>
-				</div>
-				<div class="col-twelve">
-					<div class="timeline-wrap">
-						<div class="timeline-block">
-							<div class="timeline-ico">
-								<i class="fa fa-briefcase"></i>
-							</div>
-							<div class="timeline-header">
-								<h3></h3>
-								<p>T9 2023 - T5 2024</p>
-								<h3></h3>
-								<p>Hoàn thành xong năm 1 đại học</p>
-							</div>
-							<div class="timeline-content">
-					
-								<p style="text-align: justify">
-									• Đạt được điểm A môn Cơ sở dữ liệu
-									<br>
-									•Đạt được điểm B+ môn lập trình hướng đối tượng
-									<br>
-									• Đạt được điểm B môn Giai Tích
-									<br>
-									• Đạt được điểm A Nhập môn công nghệ thông tin
-									<br>
-									• Tham gia các hoạt động ngoại khóa của khoa tổ chức
-									<br>
+        skillBars.forEach(bar => {
+            skillObserver.observe(bar);
+        });
 
+       
+        document.documentElement.style.scrollBehavior = 'smooth';
 
-								</p>
-							</div>
-						</div>
-					</div>
+       
+        document.addEventListener('mousemove', (e) => {
+            const particle = document.createElement('div');
+            particle.style.cssText = `
+                position: fixed;
+                width: 4px;
+                height: 4px;
+                background: radial-gradient(circle, rgba(99, 102, 241, 0.8), rgba(139, 92, 246, 0.4));
+                border-radius: 50%;
+                pointer-events: none;
+                z-index: 1000;
+                left: ${e.clientX}px;
+                top: ${e.clientY}px;
+                animation: fadeParticle 1s ease-out forwards;
+            `;
+            document.body.appendChild(particle);
+            setTimeout(() => particle.remove(), 1000);
+        });
 
+        
+        const particleStyle = document.createElement('style');
+        particleStyle.textContent = `
+            @keyframes fadeParticle {
+                0% { 
+                    opacity: 1; 
+                    transform: scale(1); 
+                }
+                100% { 
+                    opacity: 0; 
+                    transform: scale(0.5) translateY(-20px); 
+                }
+            }
+        `;
+        document.head.appendChild(particleStyle);
 
+        const progressBar = document.createElement('div');
+        progressBar.style.cssText = `
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+            z-index: 10000;
+            transition: width 0.3s ease;
+        `;
+        document.body.appendChild(progressBar);
 
-				</div>
-		</section>
+        window.addEventListener('scroll', () => {
+            const scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+            progressBar.style.width = scrollPercent + '%';
+        });
 
+       
+        document.querySelectorAll('.experience-item, .education-item').forEach(item => {
+            item.addEventListener('mouseenter', function() {
+                this.style.background = 'linear-gradient(135deg, #ffffff, #f0f7ff)';
+                this.style.borderColor = 'rgba(99, 102, 241, 0.3)';
+            });
 
-	</section>
+            item.addEventListener('mouseleave', function() {
+                this.style.background = 'linear-gradient(135deg, #ffffff, #f8fafc)';
+                this.style.borderColor = 'var(--border-light)';
+            });
+        });
 
+        
+        function typeWriter(element, text, speed = 50) {
+            let i = 0;
+            element.innerHTML = '';
+            function type() {
+                if (i < text.length) {
+                    element.innerHTML += text.charAt(i);
+                    i++;
+                    setTimeout(type, speed);
+                }
+            }
+            type();
+        }
 
+      
+        const textObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && !entry.target.classList.contains('typed')) {
+                    const originalText = entry.target.textContent;
+                    entry.target.classList.add('typed');
+                    setTimeout(() => {
+                        typeWriter(entry.target, originalText, 30);
+                    }, 500);
+                }
+            });
+        }, { threshold: 0.8 });
 
+        // Apply typewriter to summary
+        const summary = document.querySelector('.section .description');
+        if (summary) {
+            textObserver.observe(summary);
+        }
 
+        // Add floating animation to profile image
+        setInterval(() => {
+            const profileImg = document.querySelector('.profile-img');
+            profileImg.style.transform += ' translateY(-2px)';
+            setTimeout(() => {
+                profileImg.style.transform = profileImg.style.transform.replace(' translateY(-2px)', ' translateY(2px)');
+                setTimeout(() => {
+                    profileImg.style.transform = profileImg.style.transform.replace(' translateY(2px)', '');
+                }, 1000);
+            }, 1000);
+        }, 3000);
 
-	<section id="contact">
-		<div class="row section-intro">
-			<div class="col-twelve">
-				<h5>Contact</h5>
-				<h1>Cảm ơn đã xem</h1>
-			</div>
-		</div>
+        // Add click animation to sections
+        document.querySelectorAll('.section-title').forEach(title => {
+            title.addEventListener('click', function() {
+                this.style.animation = 'bounce 0.6s ease';
+                setTimeout(() => {
+                    this.style.animation = '';
+                }, 600);
+            });
+        });
 
-		<div class="row contact-info">
+        // Add bounce animation
+        const bounceStyle = document.createElement('style');
+        bounceStyle.textContent = `
+            @keyframes bounce {
+                0%, 20%, 60%, 100% { transform: translateY(0); }
+                40% { transform: translateY(-10px); }
+                80% { transform: translateY(-5px); }
+            }
+        `;
+        document.head.appendChild(bounceStyle);
 
-			<div class="col-twelve tab-full collapse">
-				<div class="icon">
-					<i class="icon-mail"></i>
-				</div>
-				<h5>Email của tôi</h5>
-				<p style="color: white">loivt0543@ut.edu.vn
-				</p>
-			</div>
+        // Add dynamic gradient background
+        let gradientAngle = 135;
+        setInterval(() => {
+            gradientAngle += 1;
+            document.body.style.background = `linear-gradient(${gradientAngle}deg, #667eea 0%, #764ba2 50%, #f093fb 100%)`;
+        }, 100);
 
-		</div>
+        // Add success message for print
+        printBtn.addEventListener('click', function() {
+            const message = document.createElement('div');
+            message.style.cssText = `
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+                color: white;
+                padding: 20px 40px;
+                border-radius: 12px;
+                box-shadow: var(--shadow-xl);
+                z-index: 10001;
+                font-weight: 600;
+                animation: slideDown 0.5s ease;
+            `;
+            message.textContent = 'Preparing CV for print...';
+            document.body.appendChild(message);
+            
+            setTimeout(() => {
+                message.style.animation = 'slideUp 0.5s ease forwards';
+                setTimeout(() => message.remove(), 500);
+            }, 2000);
+        });
 
-	</section>
-
-	<footer>
-		<div class="row">
-			<div class="col-six tab-full pull-right social">
-				<ul class="footer-social">
-					
-					<li><a href="https://github.com/Loivo2005" target="_blank"><i class="fa fa-github"></i></a>
-					</li>
-				</ul>
-			</div>
-			<div class="col-six tab-full">
-				
-			</div>
-			<div id="go-top">
-				<a class="smoothscroll" title="Back to Top" href="#top"><i class="fa fa-long-arrow-up"></i></a>
-			</div>
-		</div>
-
-	</footer>
-	<div id="preloader">
-		<div id="loader"></div>
-	</div>
-
-	<script src="js/jquery-2.1.3.min.js"></script>
-	<script src="js/plugins.js"></script>
-	<script src="js/main.js"></script>
+        // Add slide animations for print message
+        const slideStyle = document.createElement('style');
+        slideStyle.textContent = `
+            @keyframes slideDown {
+                from { transform: translate(-50%, -150%); opacity: 0; }
+                to { transform: translate(-50%, -50%); opacity: 1; }
+            }
+            @keyframes slideUp {
+                from { transform: translate(-50%, -50%); opacity: 1; }
+                to { transform: translate(-50%, -150%); opacity: 0; }
+            }
+        `;
+        document.head.appendChild(slideStyle);
+    </script>
 </body>
-
 </html>
